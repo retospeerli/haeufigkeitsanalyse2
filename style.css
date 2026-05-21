@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top left, #fff4c2, transparent 35%),
+    linear-gradient(135deg, #1f2937, #111827);
+  color: #1f2937;
+}
+
+.app {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+header {
+  text-align: center;
+  color: white;
+  margin-bottom: 24px;
+}
+
+header h1 {
+  font-size: 42px;
+  margin: 0 0 8px;
+}
+
+header p {
+  font-size: 20px;
+  margin: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 20px;
+}
+
+section {
+  background: #fffdf3;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+  border: 2px solid #e7d88d;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 220px;
+  resize: vertical;
+  font-size: 20px;
+  line-height: 1.5;
+  padding: 16px;
+  border-radius: 12px;
+  border: 2px solid #c7b86b;
+  background: #fffbea;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+button {
+  font-size: 18px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#analyzeBtn {
+  background: #2563eb;
+  color: white;
+}
+
+#clearBtn {
+  background: #d1d5db;
+}
+
+button:hover {
+  filter: brightness(1.08);
+}
+
+.info-card {
+  font-size: 19px;
+  line-height: 1.45;
+}
+
+.hint {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  text-align: center;
+  padding: 18px;
+  background: #fef3c7;
+  border-radius: 14px;
+  border: 2px dashed #b45309;
+  margin: 18px 0;
+}
+
+.chart-card,
+.table-card {
+  grid-column: 1 / -1;
+}
+
+canvas {
+  width: 100%;
+  max-width: 100%;
+  background: white;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+}
+
+.legend {
+  margin-top: 12px;
+  font-size: 18px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.box {
+  display: inline-block;
+  width: 24px;
+  height: 14px;
+  margin-right: 6px;
+  border-radius: 4px;
+}
+
+.box.text {
+  background: #2563eb;
+}
+
+.box.german {
+  background: #f97316;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 17px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th {
+  background: #1f2937;
+  color: white;
+}
+
+th, td {
+  padding: 9px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+.empty {
+  font-size: 20px;
+  color: #6b7280;
+}
+
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 32px;
+  }
+}
