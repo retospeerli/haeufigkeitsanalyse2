@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Cäsar-Häufigkeitsanalyse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <header>
+    <h1>Cäsar-Chiffre knacken</h1>
+    <p>Vergleiche die Buchstabenhäufigkeit des Geheimtextes mit der deutschen Sprache.</p>
+  </header>
+
+  <main>
+    <section class="input-card">
+      <h2>Geheimtext</h2>
+      <textarea id="cipherInput" placeholder="Füge hier den verschlüsselten Text ein..."></textarea>
+
+      <div class="buttons">
+        <button id="analyzeBtn">Häufigkeit analysieren</button>
+        <button id="clearBtn">Löschen</button>
+      </div>
+    </section>
+
+    <section class="info-card">
+      <h2>Auftrag</h2>
+      <p>
+        Suche im Diagramm den auffälligsten Buchstaben des Geheimtextes.
+        Vergleiche ihn mit den häufigsten Buchstaben im Deutschen:
+      </p>
+      <div class="hint">
+        E · N · I · S · R · A · T
+      </div>
+      <p>
+        Überlege: Wenn im Geheimtext ein Buchstabe besonders häufig vorkommt,
+        welcher deutsche Buchstabe könnte dahinterstecken?
+      </p>
+    </section>
+
+    <section class="chart-card">
+      <h2>Säulendiagramm</h2>
+      <canvas id="chart" width="1200" height="520"></canvas>
+      <div class="legend">
+        <span class="box text"></span> Geheimtext
+        <span class="box german"></span> Deutsche Sprache
+      </div>
+    </section>
+
+    <section class="table-card">
+      <h2>Wertetabelle</h2>
+      <div id="tableWrap"></div>
+    </section>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
